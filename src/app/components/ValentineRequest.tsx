@@ -11,14 +11,13 @@ export default function ValentineRequest() {
   const [noButtonPosition, setNoButtonPosition] = useState({ top: "60%", left: "60%" });
   const [noButtonSize, setNoButtonSize] = useState(1);
   const [noCount, setNoCount] = useState(0);
-  const [showFinalMessage, setShowFinalMessage] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [audioStarted, setAudioStarted] = useState(false);
   
   const funFacts = [
     "We've dated for 3 years, and you're still saying no? 😢",
     "You're not gonna say yes even though you liked me since we were 12? 😳",
-    "You said yes to me when he was uglier in the army, but no when I look better now? 😆",
+    "You said yes to me when I was uglier in the army, but no when I look better now? 😆",
     "We've known each other for over a decade, and you're still making me work for it? 😂",
     "PLEASE say yes 💖", 
     "ok enough just say yes bel"
@@ -80,11 +79,8 @@ export default function ValentineRequest() {
       ) : (
         <div className="text-center">
           <Confetti />
-          {!showFinalMessage ? (
-            <h1 className="text-4xl font-bold text-red-600 transition-opacity duration-3000">Yay! 🥰 I love you! 💖</h1>
-          ) : (
-            <h1 className="text-2xl font-bold text-red-600">See you next week Thursday and Friday for dinner!! 🍽️💖</h1>
-          )}
+          <h1 className="text-4xl font-bold text-red-600 transition-opacity duration-3000">Yay! 🥰 I love you! 💖</h1>
+          <h1 className="text-2xl font-bold text-red-600">See you next week Thursday and Friday for dinner!! 🍽️💖</h1>
         </div>
       )}
     </div>
