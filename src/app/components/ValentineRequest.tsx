@@ -52,11 +52,6 @@ export default function ValentineRequest() {
     setNoButtonSize(newSize);
   };
   
-  const handleFinalYes = () => {
-    setAccepted(true);
-    setTimeout(() => setShowFinalMessage(true), 3000);
-  };
-  
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-pink-200" onClick={startMusic}>
       {!accepted ? (
